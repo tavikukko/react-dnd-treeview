@@ -76,11 +76,11 @@ export type OpenIdsHandlers = {
 
 export type InitialOpen = boolean | NodeModel["id"][];
 
-export type TreeContextBase = {
+export type TreeContextBase<T = unknown> = {
   tree: NodeModel[];
   rootId: NodeModel["id"];
   classes?: Classes;
-  render: NodeRender;
+  render: NodeRender<T>;
   dragPreviewRender?: DragPreviewRender;
 };
 
