@@ -25,10 +25,11 @@ export type RenderParams = {
   onToggle(): void;
 };
 
-export type NodeRender = (
-  node: NodeModel,
+export type NodeRender<T = unknown> = (
+  node: NodeModel<T>,
   params: RenderParams
 ) => React.ReactElement;
+
 export type ClickHandler = (data: NodeModel) => void;
 
 export type DropHandler = (
